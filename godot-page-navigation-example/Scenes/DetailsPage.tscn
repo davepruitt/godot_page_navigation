@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scenes/MainPage.cs" id="1_61ets"]
+[ext_resource type="Script" path="res://Scenes/DetailsPage.cs" id="1_4h7gy"]
 
-[node name="MainPage" type="PanelContainer"]
+[node name="DetailsPage" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_61ets")
+script = ExtResource("1_4h7gy")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -26,21 +26,21 @@ theme_override_constants/separation = 16
 [node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Main Page"
+text = "Details Page"
 
 [node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "This is the root page. Push to navigate forward."
+text = "Push again to grow the stack or pop to go back."
 
 [node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Stack depth: 1"
+text = "Stack depth: 2"
 
 [node name="PushButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Push Details Page"
+text = "Push Another Details Page"
 
-[node name="TryPopButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="PopButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Try Pop Root"
+text = "Pop Page"
 

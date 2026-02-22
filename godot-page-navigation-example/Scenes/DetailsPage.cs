@@ -4,9 +4,9 @@ using GodotPageNavigation;
 namespace GodotPageNavigationExample;
 
 /// <summary>
-/// Example root page that demonstrates pushing a details page and protected root pop behavior.
+/// Example details page that demonstrates recursive push and pop operations.
 /// </summary>
-public partial class MainPage : PanelContainer, INavigationAware, INavigationPage
+public partial class DetailsPage : PanelContainer, INavigationAware, INavigationPage
 {
     #region Private Fields
 
@@ -38,8 +38,8 @@ public partial class MainPage : PanelContainer, INavigationAware, INavigationPag
         var pushButton = GetNode<Button>("MarginContainer/VBoxContainer/PushButton");
         pushButton.Pressed += OnPushPressed;
 
-        var tryPopButton = GetNode<Button>("MarginContainer/VBoxContainer/TryPopButton");
-        tryPopButton.Pressed += OnTryPopPressed;
+        var popButton = GetNode<Button>("MarginContainer/VBoxContainer/PopButton");
+        popButton.Pressed += OnPopPressed;
     }
 
     /// <summary>
@@ -62,7 +62,7 @@ public partial class MainPage : PanelContainer, INavigationAware, INavigationPag
     #region Private Methods
 
     /// <summary>
-    /// Pushes the details page.
+    /// Pushes another details page onto the stack.
     /// </summary>
     private void OnPushPressed()
     {
@@ -70,14 +70,11 @@ public partial class MainPage : PanelContainer, INavigationAware, INavigationPag
     }
 
     /// <summary>
-    /// Attempts to pop the current page and updates status text.
+    /// Pops this page from the stack.
     /// </summary>
-    private void OnTryPopPressed()
+    private void OnPopPressed()
     {
-        var popped = Navigation?.Pop() ?? false;
-        _statusLabel.Text = popped
-            ? "Popped current page."
-            : "Cannot pop the root page.";
+        Navigation?.Pop();
     }
 
     /// <summary>
