@@ -1,7 +1,6 @@
 # Godot Page Navigation
 
-![NuGet Version](https://img.shields.io/nuget/v/GodotPageNavigation?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FGodotPageNavigation%2F2.0.0)
-
+[![NuGet](https://img.shields.io/nuget/v/GodotPageNavigation?label=NuGet)](https://www.nuget.org/packages/GodotPageNavigation/)
 
 Provides a simple stack-based page navigation system for Godot (C#), inspired by mobile app frameworks such as .NET MAUI.
 
