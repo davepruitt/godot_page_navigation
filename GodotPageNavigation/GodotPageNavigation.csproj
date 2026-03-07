@@ -8,6 +8,7 @@
     <Title>Godot Page Navigation</Title>
     <Description>This package provides a simple page navigation stack library for Godot apps and games.</Description>
     <Copyright>David Pruitt</Copyright>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>  
     <PackageProjectUrl>https://github.com/davepruitt/godot_page_navigation</PackageProjectUrl>
     <RepositoryUrl>https://github.com/davepruitt/godot_page_navigation</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
